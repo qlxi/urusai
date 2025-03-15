@@ -1,6 +1,9 @@
 # Urusai
 
-Urusai is a Go implementation of [noisy](https://github.com/1tayH/noisy), a simple random HTTP/DNS internet traffic noise generator. It generates random HTTP/DNS traffic noise in the background while you go about your regular web browsing, to make your web traffic data less valuable for selling and for extra obscurity.
+Urusai (うるさい, Japanese for 'noisy') is a Go implementation of [noisy](https://github.com/1tayH/noisy), a simple random HTTP/DNS internet traffic noise generator. It generates random HTTP/DNS traffic noise in the background while you go about your regular web browsing, to make your web traffic data less valuable for selling and for extra obscurity.
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/calpa/urusai)](https://goreportcard.com/report/github.com/calpa/urusai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
 
@@ -75,16 +78,21 @@ Urusai is developed using standard Go practices. Here are some commands that wil
 
 ```bash
 # Run the project directly without building
-go run main.go --config config.json
+go run main.go
 
 # Run with a specific log level
-go run main.go --config config.json --log debug
+go run main.go --log debug
+
+# Run with a custom configuration file
+go run main.go --config config.json
 
 # Run with a timeout (in seconds)
-go run main.go --config config.json --timeout 300
+go run main.go --timeout 300
 ```
 
 ### Testing
+
+Urusai includes comprehensive test coverage for all packages. The tests verify configuration loading, command-line flag parsing, and crawler functionality.
 
 ```bash
 # Run all tests
@@ -100,6 +108,10 @@ go test -cover ./...
 go test -coverprofile=coverage.out ./...
 go tool cover -html=coverage.out
 ```
+
+Test files include:
+- `main_test.go`: Tests for command-line parsing, configuration loading, and signal handling
+- `config/config_test.go`: Tests for configuration loading and validation
 
 ### Building
 
