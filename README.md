@@ -15,9 +15,41 @@ Urusai (うるさい, Japanese for 'noisy') is a Go implementation of [noisy](ht
 
 ## Installation
 
+### Using Pre-built Binaries
+
+The easiest way to get started is to download a pre-built binary from the [releases page](https://github.com/calpa/urusai/releases).
+
+1. Download the appropriate binary for your platform:
+   - `urusai-macos-amd64` - for macOS Intel systems
+   - `urusai-macos-arm64` - for macOS Apple Silicon systems
+   - `urusai-linux-amd64` - for Linux x86_64 systems
+   - `urusai-windows-amd64.exe` - for Windows x86_64 systems
+
+2. Make the binary executable (Unix-based systems only):
+   ```bash
+   chmod +x urusai-*
+   ```
+
+3. Run the binary:
+   ```bash
+   # On macOS (Intel)
+   ./urusai-macos-amd64
+   
+   # On macOS (Apple Silicon)
+   ./urusai-macos-arm64
+   
+   # On Linux
+   ./urusai-linux-amd64
+   
+   # On Windows (using Command Prompt)
+   urusai-windows-amd64.exe
+   ```
+
+### Building from Source
+
 ```bash
 # Clone the repository
-git clone https://github.com/calpaliu/urusai.git
+git clone https://github.com/calpa/urusai.git
 
 # Navigate to the project directory
 cd urusai
