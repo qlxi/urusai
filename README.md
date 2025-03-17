@@ -159,6 +159,27 @@ GOOS=darwin GOARCH=amd64 go build -o urusai-macos-amd64
 GOOS=windows GOARCH=amd64 go build -o urusai-windows-amd64.exe
 ```
 
+### Releases
+
+Urusai uses GitHub Actions for automated releases. When a new tag with format `v*` (e.g., `v1.0.0`) is pushed to the repository, GitHub Actions will automatically:
+
+1. Run tests to ensure code quality
+2. Build binaries for all supported platforms (macOS Intel/ARM, Linux, Windows)
+3. Create compressed archives of the binaries
+4. Create a new GitHub release with the binaries attached
+
+To create a new release:
+
+```bash
+# Tag the commit
+git tag v1.0.0
+
+# Push the tag to GitHub
+git push origin v1.0.0
+```
+
+The GitHub Actions workflow will handle the rest automatically.
+
 ### Code Quality
 
 ```bash
