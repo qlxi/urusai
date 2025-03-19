@@ -7,8 +7,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"urusai/config"
-	"urusai/crawler"
+	"github.com/calpa/urusai/config"
+	"github.com/calpa/urusai/crawler"
 )
 
 func main() {

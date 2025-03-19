@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"urusai/config"
+	"github.com/calpa/urusai/config"
 )
 
 // TestFlagParsing tests the command line flag parsing functionality

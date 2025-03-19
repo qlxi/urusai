@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"urusai/config"
+	"github.com/calpa/urusai/config"
 )
 
 // Crawler represents a web crawler that generates random HTTP traffic
