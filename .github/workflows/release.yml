@@ -27,11 +27,13 @@ jobs:
           GOOS=darwin GOARCH=amd64 go build -o urusai-macos-amd64
           GOOS=darwin GOARCH=arm64 go build -o urusai-macos-arm64
           GOOS=linux GOARCH=amd64 go build -o urusai-linux-amd64
+          GOOS=linux GOARCH=arm64 go build -o urusai-linux-arm64
           GOOS=windows GOARCH=amd64 go build -o urusai-windows-amd64.exe
           
           tar -czf release/urusai-macos-amd64.tar.gz urusai-macos-amd64
           tar -czf release/urusai-macos-arm64.tar.gz urusai-macos-arm64
           tar -czf release/urusai-linux-amd64.tar.gz urusai-linux-amd64
+          tar -czf release/urusai-linux-arm64.tar.gz urusai-linux-arm64
           zip release/urusai-windows-amd64.zip urusai-windows-amd64.exe
 
       - name: Create Release
@@ -42,6 +44,7 @@ jobs:
             release/urusai-macos-amd64.tar.gz
             release/urusai-macos-arm64.tar.gz
             release/urusai-linux-amd64.tar.gz
+            release/urusai-linux-arm64.tar.gz
             release/urusai-windows-amd64.zip
           draft: false
           prerelease: false
